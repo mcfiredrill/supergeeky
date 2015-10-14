@@ -13,16 +13,20 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'unicorn'
-
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
-
-gem 'rspec-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-github'
 gem 'koala'
 gem 'octokit'
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+end
